@@ -1,0 +1,102 @@
+---
+# ==================================
+# SITE METADATA
+#
+# Edit the fields below to update the
+# main contact and personal details.
+# ==================================
+
+name: "Roman Jurowetzki"
+title: "Associate Professor of Innovation & Applied Data Science"
+photo_path: "photo_small.png"
+cv_path: "CV_rj.pdf"
+
+# Contact & Social Links
+email: "roman@business.aau.dk"
+linkedin_url: "https://linkedin.com/in/rjurowetzki"
+google_scholar_url: "https://scholar.google.se/citations?user=9Zwa75gAAAAJ"
+
+# Office Address (each line is a new line in the address)
+office_address:
+  - "Fibigerstræde 11, Room 103"
+  - "DK-9220 Aalborg Øst, Denmark"
+---
+
+# ==================================
+# PAGE CONTENT
+#
+# Edit the content for each section
+# of your website below.
+# ==================================
+
+## Header Section
+
+### Affiliations
+Associate Prof. Aalborg University Business School • Chief Scientist at CAISA • AI Denmark Project Lead
+
+### Introduction / Bio
+Combining innovation studies with data-driven methods to understand and govern emerging technologies, particularly artificial intelligence. Research focuses on developing socio-technical frameworks for responsible AI deployment and evaluation.
+
+
+---
+## Research Interests
+
+> Use a hyphen `-` to create a list item.
+
+- Innovation dynamics of emerging technologies
+- Responsible AI evaluation & governance
+- Natural language processing & scientometrics
+- Data-driven policy analysis
+
+
+---
+## Current Projects
+
+> For each project, use a `###` heading for the title, followed by list items for the metadata and description.
+
+### CAISA – National Centre for AI in Society
+- **Role:** Chief Scientist
+- **Description:** Starting project on ai evaluation and quality benchmarking cpabilities - looking for collaborators (soon hiring postdocs)
+- expression of interest - info about potential project here: https://caisa-postdoc-interest.rjuro.com
+
+### NerdLM (that's a fun project - list last)
+- (http://nerdlm.rjuro.com) try it out...
+- **Description:** AI-powered academic assistant for literature review & text-to-speech.
+
+### Green Transition Policy Centre (GreenTraC)
+- **Role:** AAU PI • Carlsberg Foundation
+- **Description:** Comprehensive theory of green transition policy across Denmark, Norway, and Sweden. Multi-source database using natural language processing and network analysis to map relationships among key actors.
+
+### AI Denmark
+Project LEad AAU. Supporting AI deployment in Danish SMEs. Since 2021.
+
+---
+## Teaching & Outreach
+
+- Co-founder and coordinator of MSc Business Data Science at AAU
+- Social Data Science Semester at AAU
+- AI/NLP methods in Business, University of Strasbourg (once a year)
+- Digital Innovation, UCAS/SDC Innovation Management Master
+- Collaborates with UNESCO and G20 on AI Ethics and AI Regulation
+
+
+---
+## News (SKIP FOR NOW)
+
+> For each news item, use a `###` heading for the date, followed by the news description.
+
+### May 2025
+Appointed Chief Scientist at CAISA during the centre's official launch.
+
+
+---
+## Selected Publications
+
+> Use a consistent format for each publication. The example below uses a list item with bold for the title and italics for the journal. This is just a suggestion for readability in Markdown.
+
+	•	Jurowetzki, R., Hain, D. S., Wirtz, K., & Bianchini, S. (2025). The private sector is hoarding AI researchers: what implications for science? AI & Society, 1–8. https://link.springer.com/article/10.1007/s00146-024-02171-z  ￼
+	•	Elmholdt, K. T., Nielsen, J. A., Florczak, C. K., Jurowetzki, R., & Hain, D. (2025). The hopes and fears of artificial intelligence: a comparative computational discourse analysis. AI & Society, 1–18. https://link.springer.com/article/10.1007/s00146-025-02214-z  ￼
+	•	Bekamiri, H., Hain, D. S., & Jurowetzki, R. (2024). PatentSBERTa: A deep NLP-based hybrid model for patent distance and classification using augmented SBERT. Technological Forecasting and Social Change, 206, 123536. https://www.sciencedirect.com/science/article/pii/S0040162524003329  ￼
+	•	Holm, J. R., Hain, D. S., Jurowetzki, R., & Lorenz, E. (2023). Innovation dynamics in the age of artificial intelligence: introduction to the special issue. Industry and Innovation, 30(9), 1141–1155. https://www.tandfonline.com/doi/full/10.1080/13662716.2023.2272724  ￼
+	•	Hain, D. S., Jurowetzki, R., Buchmann, T., & Wolf, P. (2022). A text-embedding-based approach to measuring patent-to-patent technological similarity. Technological Forecasting and Social Change, 177, 121559. https://www.sciencedirect.com/science/article/pii/S0040162522000919  ￼
+	•	Jurowetzki, R., Lema, R., & Lundvall, B. Å. (2018). Combining innovation systems and global value chains for development: Towards a research agenda. The European Journal of Development Research, 30(3), 364–388. https://link.springer.com/article/10.1057/s41287-018-0137-4  ￼

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Jurowetzki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base & Resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fafafa;
+            color: #2a2a2a;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 15px 20px;
+        }
+
+        .top-nav a {
+            color: #4a4a4a;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin: 0 15px;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .top-nav a:hover {
+            color: #1a1a1a;
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 40px 60px; /* Increased top padding for fixed nav */
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 40px rgba(0,0,0,0.03);
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .profile-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            /* filter: grayscale(100%); -- Removed as requested */
+            flex-shrink: 0;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .header-content .title {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .affiliations {
+            font-size: 0.95rem;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .about-intro {
+            color: #4a4a4a;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .cv-link {
+            display: inline-block;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid #ddd;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .cv-link:hover {
+            background: #f5f5f5;
+            text-decoration: none;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 50px;
+            scroll-margin-top: 100px; /* Offset for fixed nav */
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .research-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .research-list li {
+            color: #4a4a4a;
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .research-list li:before {
+            content: "—";
+            color: #999;
+            position: absolute;
+            left: 0;
+        }
+
+        .project {
+            margin-bottom: 30px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+        .project-title a {
+            color: inherit;
+        }
+
+        .project-meta {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .project-desc {
+            color: #4a4a4a;
+            font-size: 0.95rem;
+        }
+
+        .publication {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .publication:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .pub-title {
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .pub-title a {
+            color: inherit;
+        }
+        .pub-title a:hover {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+
+        .pub-authors {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .pub-journal {
+            color: #888;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .teaching-list {
+            list-style: none;
+        }
+
+        .teaching-list li {
+            color: #4a4a4a;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .teaching-list li:before {
+            content: "•";
+            color: #bbb;
+            position: absolute;
+            left: 0;
+        }
+
+        .contact-section {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .contact-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-item {
+            color: #4a4a4a;
+            text-decoration: none;
+        }
+
+        .contact-item:hover {
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        
+        /* Scroll to Top Button */
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #2a2a2a;
+            color: white;
+            cursor: pointer;
+            padding: 12px;
+            border-radius: 50%;
+            font-size: 18px;
+            width: 45px;
+            height: 45px;
+            line-height: 1;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: background-color 0.3s, opacity 0.3s;
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 100px 20px 40px;
+            }
+            
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+                align-items: center;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 0; /* Remove gap when stacking */
+            }
+            
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .top-nav a {
+                margin: 0 10px;
+                font-size: 0.8rem;
+            }
+
+            #scrollTopBtn {
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <img src="photo_small.png" alt="Roman Jurowetzki" class="profile-photo">
+            <div class="header-content">
+                <h1>Roman Jurowetzki</h1>
+                <p class="title">Associate Professor of Innovation & Applied Data Science</p>
+                <p class="affiliations">Associate Prof. Aalborg University Business School • Chief Scientist at CAISA • AI Denmark Project Lead</p>
+                <p class="about-intro">
+                    Combining innovation studies with data-driven methods to understand and govern emerging technologies, particularly artificial intelligence. Research focuses on developing socio-technical frameworks for responsible AI deployment and evaluation.
+                </p>
+                <a href="CV_rj.pdf" class="cv-link" download>Download CV (PDF)</a>
+            </div>
+        </header>
+
+        <!-- Main Content in Columns -->
+        <div class="two-column">
+            <!-- Left Column -->
+            <div>
+                <!-- Research Interests -->
+                <section class="section" id="research">
+                    <h2 class="section-title">Research Interests</h2>
+                    <ul class="research-list">
+                        <li>Innovation dynamics of emerging technologies</li>
+                        <li>Responsible AI evaluation & governance</li>
+                        <li>Natural language processing & scientometrics</li>
+                        <li>Data-driven policy analysis</li>
+                    </ul>
+                </section>
+
+                <!-- Teaching & Outreach -->
+                <section class="section">
+                    <h2 class="section-title">Teaching & Outreach</h2>
+                    <ul class="teaching-list">
+                        <li>Co-founder and coordinator of MSc Business Data Science at AAU</li>
+                        <li>Social Data Science Semester at AAU</li>
+                        <li>AI/NLP methods in Business, University of Strasbourg (Annual Guest Lecture)</li>
+                        <li>Digital Innovation, UCAS/SDC Innovation Management Master</li>
+                        <li>Collaborates with UNESCO and G20 on AI Ethics and AI Regulation</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+                 <!-- Current Projects -->
+                <section class="section" id="projects">
+                    <h2 class="section-title">Current Projects</h2>
+                    
+                    <div class="project">
+                        <div class="project-title">CAISA – National Centre for AI in Society</div>
+                        <div class="project-meta">Role: Chief Scientist</div>
+                        <p class="project-desc">Leading a new project on AI evaluation and quality benchmarking capabilities. We are actively seeking collaborators and will be hiring Postdoctoral researchers soon. <a href="https://caisa-postdoc-interest.rjuro.com" target="_blank">Express your interest here</a>.</p>
+                    </div>
+                    
+                    <div class="project">
+                        <div class="project-title">Green Transition Policy Centre (GreenTraC)</div>
+                        <div class="project-meta">Role: AAU Principal Investigator • Carlsberg Foundation</div>
+                        <p class="project-desc">Developing a comprehensive theory of green transition policy across Scandinavia via a multi-source database using NLP and network analysis to map key actors.</p>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-title">AI Denmark</div>
+                        <div class="project-meta">Role: Project Lead (AAU)</div>
+                        <p class="project-desc">Supporting the deployment of artificial intelligence in Danish SMEs since 2021.</p>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-title"><a href="http://nerdlm.rjuro.com" target="_blank">🤓 NerdLM 🔗</a></div>
+                        <div class="project-meta">Fun Project</div>
+                        <p class="project-desc">AI-powered academic assistant for literature review & text-to-speech. Try it out!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Publications Section (Full-width) -->
+        <section class="section" id="publications">
+            <h2 class="section-title">Selected Publications</h2>
+            
+            <div class="publication">
+                <div class="pub-title"><a href="https://link.springer.com/article/10.1007/s00146-024-02171-z" target="_blank">The private sector is hoarding AI researchers: what implications for science?</a></div>
+                <div class="pub-authors">Jurowetzki, R., Hain, D. S., Wirtz, K., & Bianchini, S. (2025).</div>
+                <div class="pub-journal">AI & Society, 1–8.</div>
+            </div>
+
+            <div class="publication">
+                <div class="pub-title"><a href="https://link.springer.com/article/10.1007/s00146-025-02214-z" target="_blank">The hopes and fears of artificial intelligence: a comparative computational discourse analysis.</a></div>
+                <div class="pub-authors">Elmholdt, K. T., Nielsen, J. A., Florczak, C. K., Jurowetzki, R., & Hain, D. (2025).</div>
+                <div class="pub-journal">AI & Society, 1–18.</div>
+            </div>
+            
+            <div class="publication">
+                <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0040162524003329" target="_blank">PatentSBERTa: A deep NLP-based hybrid model for patent distance and classification using augmented SBERT.</a></div>
+                <div class="pub-authors">Bekamiri, H., Hain, D. S., & Jurowetzki, R. (2024).</div>
+                <div class="pub-journal">Technological Forecasting and Social Change, 206, 123536.</div>
+            </div>
+
+            <div class="publication">
+                <div class="pub-title"><a href="https://www.tandfonline.com/doi/full/10.1080/13662716.2023.2272724" target="_blank">Innovation dynamics in the age of artificial intelligence: introduction to the special issue.</a></div>
+                <div class="pub-authors">Holm, J. R., Hain, D. S., Jurowetzki, R., & Lorenz, E. (2023).</div>
+                <div class="pub-journal">Industry and Innovation, 30(9), 1141–1155.</div>
+            </div>
+
+            <div class="publication">
+                <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0040162522000919" target="_blank">A text-embedding-based approach to measuring patent-to-patent technological similarity.</a></div>
+                <div class="pub-authors">Hain, D. S., Jurowetzki, R., Buchmann, T., & Wolf, P. (2022).</div>
+                <div class="pub-journal">Technological Forecasting and Social Change, 177, 121559.</div>
+            </div>
+
+            <div class="publication">
+                <div class="pub-title"><a href="https://link.springer.com/article/10.1057/s41287-018-0137-4" target="_blank">Combining innovation systems and global value chains for development: Towards a research agenda.</a></div>
+                <div class="pub-authors">Jurowetzki, R., Lema, R., & Lundvall, B. Å. (2018).</div>
+                <div class="pub-journal">The European Journal of Development Research, 30(3), 364–388.</div>
+            </div>
+
+            <p style="color: #888; font-size: 0.9rem; margin-top: 20px;">
+                Complete list available on <a href="https://scholar.google.se/citations?user=9Zwa75gAAAAJ" style="color: #4a4a4a;" target="_blank">Google Scholar</a>
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h3 class="contact-title">Contact</h3>
+            <div class="contact-grid">
+                <div>
+                    <div class="contact-label">Email</div>
+                    <a href="mailto:roman@business.aau.dk" class="contact-item">roman@business.aau.dk</a>
+                </div>
+                <div>
+                    <div class="contact-label">Office</div>
+                    <div class="contact-item">Fibigerstræde 11, Room 103<br>DK-9220 Aalborg Øst, Denmark</div>
+                </div>
+                <div>
+                    <div class="contact-label">Links</div>
+                    <a href="https://linkedin.com/in/rjurowetzki" class="contact-item" target="_blank">LinkedIn</a><br>
+                    <a href="https://scholar.google.se/citations?user=9Zwa75gAAAAJ" class="contact-item" target="_blank">Google Scholar</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+
+    <script>
+        // Get the button
+        let scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        // When the user scrolls down 200px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
