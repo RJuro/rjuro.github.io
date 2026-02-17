@@ -15,6 +15,8 @@ cv_path: "CV_rj.pdf"
 email: "roman@business.aau.dk"
 linkedin_url: "https://linkedin.com/in/rjurowetzki"
 google_scholar_url: "https://scholar.google.se/citations?user=9Zwa75gAAAAJ"
+orcid_url: "https://orcid.org/0000-0002-5199-918X"
+aau_portal_url: "https://vbn.aau.dk/en/persons/roman/"
 
 # Office Address (each line is a new line in the address)
 office_address:
@@ -59,16 +61,17 @@ Combining innovation studies with data-driven methods to understand and govern e
 - **Description:** Starting project on ai evaluation and quality benchmarking cpabilities - looking for collaborators (soon hiring postdocs)
 - expression of interest - info about potential project here: https://caisa-postdoc-interest.rjuro.com
 
-### NerdLM (that's a fun project - list last)
-- (http://nerdlm.rjuro.com) try it out...
-- **Description:** AI-powered academic assistant for literature review & text-to-speech.
-
 ### Green Transition Policy Centre (GreenTraC)
 - **Role:** AAU PI • Carlsberg Foundation
 - **Description:** Comprehensive theory of green transition policy across Denmark, Norway, and Sweden. Multi-source database using natural language processing and network analysis to map relationships among key actors.
 
 ### AI Denmark
-Project LEad AAU. Supporting AI deployment in Danish SMEs. Since 2021.
+Project Lead AAU. Supporting AI deployment in Danish SMEs. Since 2021.
+
+### NerdLM (that's a fun project - list last)
+- (http://nerdlm.rjuro.com) try it out...
+- **Description:** AI-powered academic assistant for literature review & text-to-speech.
+
 
 ---
 ## Teaching & Outreach
@@ -81,9 +84,13 @@ Project LEad AAU. Supporting AI deployment in Danish SMEs. Since 2021.
 
 
 ---
-## News (SKIP FOR NOW)
+## News
 
-> For each news item, use a `###` heading for the date, followed by the news description.
+### Nov 2025
+UNESCO Toolkit for G20 published — co-authored a policy toolkit on reducing AI-connected inequalities, prepared for the South Africa G20 Presidency.
+
+### Nov 2025
+CAISA published research briefs on AGI and its societal implications and a modular approach to digital sovereignty in Denmark.
 
 ### May 2025
 Appointed Chief Scientist at CAISA during the centre's official launch.
@@ -92,11 +99,30 @@ Appointed Chief Scientist at CAISA during the centre's official launch.
 ---
 ## Selected Publications
 
-> Use a consistent format for each publication. The example below uses a list item with bold for the title and italics for the journal. This is just a suggestion for readability in Markdown.
+> Publications are grouped by year and tagged by type (Journal Article, Workshop Paper, Conference Paper, Report, Policy Brief, Research Brief).
 
-	•	Jurowetzki, R., Hain, D. S., Wirtz, K., & Bianchini, S. (2025). The private sector is hoarding AI researchers: what implications for science? AI & Society, 1–8. https://link.springer.com/article/10.1007/s00146-024-02171-z  ￼
-	•	Elmholdt, K. T., Nielsen, J. A., Florczak, C. K., Jurowetzki, R., & Hain, D. (2025). The hopes and fears of artificial intelligence: a comparative computational discourse analysis. AI & Society, 1–18. https://link.springer.com/article/10.1007/s00146-025-02214-z  ￼
-	•	Bekamiri, H., Hain, D. S., & Jurowetzki, R. (2024). PatentSBERTa: A deep NLP-based hybrid model for patent distance and classification using augmented SBERT. Technological Forecasting and Social Change, 206, 123536. https://www.sciencedirect.com/science/article/pii/S0040162524003329  ￼
-	•	Holm, J. R., Hain, D. S., Jurowetzki, R., & Lorenz, E. (2023). Innovation dynamics in the age of artificial intelligence: introduction to the special issue. Industry and Innovation, 30(9), 1141–1155. https://www.tandfonline.com/doi/full/10.1080/13662716.2023.2272724  ￼
-	•	Hain, D. S., Jurowetzki, R., Buchmann, T., & Wolf, P. (2022). A text-embedding-based approach to measuring patent-to-patent technological similarity. Technological Forecasting and Social Change, 177, 121559. https://www.sciencedirect.com/science/article/pii/S0040162522000919  ￼
-	•	Jurowetzki, R., Lema, R., & Lundvall, B. Å. (2018). Combining innovation systems and global value chains for development: Towards a research agenda. The European Journal of Development Research, 30(3), 364–388. https://link.springer.com/article/10.1057/s41287-018-0137-4  ￼
+### 2025
+
+- [UNESCO/G20 Report] Squicciarini, M., Jurowetzki, R., & Pfeiffer, C. (2025). Toolkit to Reduce Inequalities Connected to the Use of Artificial Intelligence. UNESCO. https://unesdoc.unesco.org/ark:/48223/pf0000395373
+- [Research Brief] Sogaard, A., Rogers, A., Adler-Nissen, R., Belongie, S., Moeslund, T. B., & Jurowetzki, R. (2025). Artificial General Intelligence and its Societal Implications. CAISA. https://caisa.dk/forskning/agi-and-its-societal-implications
+- [Policy Brief] Jurowetzki, R., Adler-Nissen, R., & Pedersen, M. A. (2025). A Modular Approach to Digital Sovereignty: From Ambition to Action with a National AI Orchestration Layer. CAISA. https://caisa.dk/forskning
+- [Journal Article] Jurowetzki, R., Hain, D. S., Wirtz, K., & Bianchini, S. (2025). The private sector is hoarding AI researchers: what implications for science? AI & Society, 40(5), 4145–4152. https://link.springer.com/article/10.1007/s00146-024-02171-z
+- [Journal Article] Elmholdt, K. T., Nielsen, J. A., Florczak, C. K., Jurowetzki, R., & Hain, D. (2025). The hopes and fears of artificial intelligence: a comparative computational discourse analysis. AI & Society, 40(6), 4765–4782. https://link.springer.com/article/10.1007/s00146-025-02214-z
+- [Workshop Paper] Larsen, B. & Jurowetzki, R. (2025). Using reasoning for citation context classification. SCOLIA '25, CEUR-WS Vol. 4022, 4–10. https://ceur-ws.org/Vol-4022/paper-01.pdf
+- [Conference Paper] Jurowetzki, R., Abbonato, D., & Squicciarini, M. (2025). Mapping AI's Labor Impact: A Task Exposure Framework for Occupational Analysis. Conference paper, 40 pp.
+
+### 2024
+
+- [Journal Article] Bekamiri, H., Hain, D. S., & Jurowetzki, R. (2024). PatentSBERTa: A deep NLP-based hybrid model for patent distance and classification using augmented SBERT. Technological Forecasting and Social Change, 206, 123536. https://www.sciencedirect.com/science/article/pii/S0040162524003329
+
+### 2023
+
+- [Journal Article] Holm, J. R., Hain, D. S., Jurowetzki, R., & Lorenz, E. (2023). Innovation dynamics in the age of artificial intelligence: introduction to the special issue. Industry and Innovation, 30(9), 1141–1155. https://www.tandfonline.com/doi/full/10.1080/13662716.2023.2272724
+
+### 2022
+
+- [Journal Article] Hain, D. S., Jurowetzki, R., Buchmann, T., & Wolf, P. (2022). A text-embedding-based approach to measuring patent-to-patent technological similarity. Technological Forecasting and Social Change, 177, 121559. https://www.sciencedirect.com/science/article/pii/S0040162522000919
+
+### 2018
+
+- [Journal Article] Jurowetzki, R., Lema, R., & Lundvall, B. Å. (2018). Combining innovation systems and global value chains for development: Towards a research agenda. The European Journal of Development Research, 30(3), 364–388. https://link.springer.com/article/10.1057/s41287-018-0137-4
