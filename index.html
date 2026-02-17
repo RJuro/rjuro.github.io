@@ -4,193 +4,248 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roman Jurowetzki</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Top Navigation -->
     <nav class="top-nav">
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
+        <div class="nav-inner">
+            <a href="#" class="nav-name" onclick="scrollToTop(); return false;">RJ</a>
+            <div class="nav-links">
+                <a href="#research">Research</a>
+                <a href="#projects">Projects</a>
+                <a href="#publications">Publications</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button id="theme-toggle" title="Toggle theme">
+                <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </button>
+        </div>
     </nav>
 
     <div class="container">
-        <!-- Header -->
+        <!-- Hero Header -->
         <header class="header">
             <img src="photo_small.png" alt="Roman Jurowetzki" class="profile-photo">
             <div class="header-content">
                 <h1>Roman Jurowetzki</h1>
                 <p class="title">Associate Professor of Innovation & Applied Data Science</p>
-                <p class="affiliations">Associate Prof. Aalborg University Business School &bull; Chief Scientist at CAISA &bull; AI Denmark Project Lead</p>
+                <p class="affiliations">
+                    <a href="https://vbn.aau.dk/en/persons/roman/" target="_blank">Aalborg University Business School</a>
+                    <span class="sep">/</span>
+                    <a href="https://caisa.dk" target="_blank">CAISA</a> Chief Scientist
+                    <span class="sep">/</span>
+                    <a href="https://aidenmark.dk" target="_blank">AI Denmark</a> Project Lead
+                </p>
                 <p class="about-intro">
                     Combining innovation studies with data-driven methods to understand and govern emerging technologies, particularly artificial intelligence. Research focuses on developing socio-technical frameworks for responsible AI deployment and evaluation.
                 </p>
                 <div class="header-actions">
-                    <a href="CV_rj.pdf" class="cv-link" download>Download CV</a>
-                    <a href="https://scholar.google.se/citations?user=9Zwa75gAAAAJ" class="cv-link cv-link-outline" target="_blank">Google Scholar</a>
-                    <a href="https://orcid.org/0000-0002-5199-918X" class="cv-link cv-link-outline" target="_blank">ORCID</a>
+                    <a href="CV_rj.pdf" class="btn btn-primary" download>Download CV</a>
+                    <a href="https://scholar.google.se/citations?user=9Zwa75gAAAAJ" class="btn btn-ghost" target="_blank">Google Scholar</a>
+                    <a href="https://orcid.org/0000-0002-5199-918X" class="btn btn-ghost" target="_blank">ORCID</a>
                 </div>
             </div>
         </header>
 
+        <!-- Featured Highlight -->
+        <section class="featured">
+            <span class="featured-label">New</span>
+            <p>
+                <a href="https://www.dcdt.gov.za/images/documents/Diverse/G20_toolkit-AI-inequality.pdf" target="_blank"><strong>UNESCO / G20 Toolkit</strong></a> on reducing AI-connected inequalities published for the South Africa G20 Presidency
+                <span class="sep">&mdash;</span>
+                <a href="https://caisa.dk/forskning/agi-and-its-societal-implications" target="_blank">CAISA AGI research brief</a> out now.
+            </p>
+        </section>
+
         <!-- Main Content in Columns -->
-        <div class="two-column">
+        <div class="two-column" id="research">
             <!-- Left Column -->
             <div>
                 <!-- Research Interests -->
-                <section class="section" id="research">
+                <section class="section">
                     <h2 class="section-title">Research Interests</h2>
-                    <ul class="research-list">
-                        <li>Innovation dynamics of emerging technologies</li>
-                        <li>Responsible AI evaluation & governance</li>
-                        <li>Natural language processing & scientometrics</li>
-                        <li>Data-driven policy analysis</li>
-                    </ul>
+                    <div class="tag-list">
+                        <span class="tag">Innovation dynamics</span>
+                        <span class="tag">AI governance</span>
+                        <span class="tag">NLP & scientometrics</span>
+                        <span class="tag">Science & technology policy</span>
+                        <span class="tag">Computational social science</span>
+                        <span class="tag">Global value chains</span>
+                    </div>
                 </section>
 
                 <!-- Teaching & Outreach -->
                 <section class="section">
                     <h2 class="section-title">Teaching & Outreach</h2>
-                    <ul class="teaching-list">
-                        <li>Co-founder and coordinator of MSc Business Data Science at AAU</li>
-                        <li>Social Data Science Semester at AAU</li>
-                        <li>AI/NLP methods in Business, University of Strasbourg (Annual Guest Lecture)</li>
-                        <li>Digital Innovation, UCAS/SDC Innovation Management Master</li>
-                        <li>Collaborates with UNESCO and G20 on AI Ethics and AI Regulation</li>
+                    <ul class="minimal-list">
+                        <li>Co-founder & coordinator, <strong>MSc Business Data Science</strong>, AAU</li>
+                        <li>Social Data Science Semester, AAU</li>
+                        <li>AI/NLP methods in Business, <a href="https://www.unistra.fr/en/" target="_blank">University of Strasbourg</a> (annual)</li>
+                        <li>Digital Innovation, <a href="https://sdc.university/" target="_blank">UCAS/SDC</a> Innovation Mgmt. Master</li>
+                        <li>Collaborates with <a href="https://www.unesco.org/en/artificial-intelligence" target="_blank">UNESCO</a> and G20 on AI Ethics & Regulation</li>
                     </ul>
                 </section>
             </div>
 
             <!-- Right Column -->
             <div>
-                 <!-- Current Projects -->
                 <section class="section" id="projects">
                     <h2 class="section-title">Current Projects</h2>
 
                     <div class="project">
-                        <div class="project-title">CAISA – National Centre for AI in Society</div>
-                        <div class="project-meta">Role: Chief Scientist</div>
-                        <p class="project-desc">Leading a new project on AI evaluation and quality benchmarking capabilities. We are actively seeking collaborators and will be hiring Postdoctoral researchers soon. <a href="https://caisa-postdoc-interest.rjuro.com" target="_blank">Express your interest here</a>.</p>
+                        <div class="project-title"><a href="https://caisa.dk" target="_blank">CAISA &ndash; National Centre for AI in Society</a></div>
+                        <div class="project-meta">Chief Scientist</div>
+                        <p class="project-desc">Leading research on AI evaluation and quality benchmarking. Cross-university centre bridging technical AI research with social science and humanities.</p>
                     </div>
 
                     <div class="project">
                         <div class="project-title">Green Transition Policy Centre (GreenTraC)</div>
-                        <div class="project-meta">Role: AAU Principal Investigator &bull; Carlsberg Foundation</div>
-                        <p class="project-desc">Developing a comprehensive theory of green transition policy across Scandinavia via a multi-source database using NLP and network analysis to map key actors.</p>
+                        <div class="project-meta">AAU Principal Investigator &bull; <a href="https://www.carlsbergfondet.dk/en" target="_blank">Carlsberg Foundation</a></div>
+                        <p class="project-desc">Comprehensive theory of green transition policy across Scandinavia via a multi-source database using NLP and network analysis to map key actors.</p>
                     </div>
 
                     <div class="project">
-                        <div class="project-title">AI Denmark</div>
-                        <div class="project-meta">Role: Project Lead (AAU)</div>
-                        <p class="project-desc">Supporting the deployment of artificial intelligence in Danish SMEs since 2021.</p>
+                        <div class="project-title"><a href="https://aidenmark.dk" target="_blank">AI Denmark</a></div>
+                        <div class="project-meta">Project Lead (AAU)</div>
+                        <p class="project-desc">Supporting AI deployment in Danish SMEs since 2021.</p>
                     </div>
 
                     <div class="project">
                         <div class="project-title"><a href="http://nerdlm.rjuro.com" target="_blank">NerdLM</a></div>
-                        <div class="project-meta">Fun Project</div>
-                        <p class="project-desc">AI-powered academic assistant for literature review & text-to-speech. Try it out!</p>
+                        <div class="project-meta">Side project</div>
+                        <p class="project-desc">AI-powered academic assistant for literature review & text-to-speech.</p>
                     </div>
                 </section>
             </div>
         </div>
 
-        <!-- Publications Section (Full-width) -->
+        <!-- Publications Section -->
         <section class="section" id="publications">
             <h2 class="section-title">Selected Publications</h2>
 
-            <h3 class="pub-year">2025</h3>
+            <div class="pub-group">
+                <div class="pub-group-year">2025</div>
+                <div class="pub-group-items">
 
-            <div class="publication">
-                <div class="pub-badge badge-report">UNESCO / G20 Report</div>
-                <div class="pub-title"><a href="https://unesdoc.unesco.org/ark:/48223/pf0000395373" target="_blank">Toolkit to Reduce Inequalities Connected to the Use of Artificial Intelligence</a></div>
-                <div class="pub-authors">Squicciarini, M., Jurowetzki, R., & Pfeiffer, C. (2025).</div>
-                <div class="pub-journal">UNESCO, prepared for the 2025 South Africa G20 Presidency.</div>
+                    <div class="pub">
+                        <span class="pub-type type-report">Report</span>
+                        <div class="pub-body">
+                            <a href="https://www.dcdt.gov.za/images/documents/Diverse/G20_toolkit-AI-inequality.pdf" target="_blank" class="pub-title">Toolkit to Reduce Inequalities Connected to the Use of Artificial Intelligence</a>
+                            <div class="pub-meta">Squicciarini, M., Jurowetzki, R., & Pfeiffer, C. &mdash; <em>UNESCO / G20 South Africa Presidency</em></div>
+                        </div>
+                    </div>
+
+                    <div class="pub">
+                        <span class="pub-type type-brief">Brief</span>
+                        <div class="pub-body">
+                            <a href="https://caisa.dk/forskning/agi-and-its-societal-implications" target="_blank" class="pub-title">Artificial General Intelligence and its Societal Implications</a>
+                            <div class="pub-meta">Sogaard, A., Rogers, A., Adler-Nissen, R., Belongie, S., Moeslund, T. B., & Jurowetzki, R. &mdash; <em><a href="https://caisa.dk" target="_blank">CAISA</a></em></div>
+                        </div>
+                    </div>
+
+                    <div class="pub">
+                        <span class="pub-type type-brief">Brief</span>
+                        <div class="pub-body">
+                            <a href="https://caisa.dk/forskning/en-modulaer-tilgang-til-digital-suveraenitet" target="_blank" class="pub-title">A Modular Approach to Digital Sovereignty: From Ambition to Action with a National AI Orchestration Layer</a>
+                            <div class="pub-meta">Jurowetzki, R., Adler-Nissen, R., & Pedersen, M. A. &mdash; <em><a href="https://caisa.dk" target="_blank">CAISA</a></em></div>
+                        </div>
+                    </div>
+
+                    <div class="pub">
+                        <span class="pub-type type-journal">Journal</span>
+                        <div class="pub-body">
+                            <a href="https://link.springer.com/article/10.1007/s00146-024-02171-z" target="_blank" class="pub-title">The private sector is hoarding AI researchers: what implications for science?</a>
+                            <div class="pub-meta">Jurowetzki, R., Hain, D. S., Wirtz, K., & Bianchini, S. &mdash; <em>AI & Society</em> 40(5), 4145&ndash;4152</div>
+                        </div>
+                    </div>
+
+                    <div class="pub">
+                        <span class="pub-type type-journal">Journal</span>
+                        <div class="pub-body">
+                            <a href="https://link.springer.com/article/10.1007/s00146-025-02214-z" target="_blank" class="pub-title">The hopes and fears of artificial intelligence: a comparative computational discourse analysis</a>
+                            <div class="pub-meta">Elmholdt, K. T., Nielsen, J. A., Florczak, C. K., Jurowetzki, R., & Hain, D. &mdash; <em>AI & Society</em> 40(6), 4765&ndash;4782</div>
+                        </div>
+                    </div>
+
+                    <div class="pub">
+                        <span class="pub-type type-conf">Workshop</span>
+                        <div class="pub-body">
+                            <a href="https://ceur-ws.org/Vol-4022/paper-01.pdf" target="_blank" class="pub-title">Using reasoning for citation context classification</a>
+                            <div class="pub-meta">Larsen, B. & Jurowetzki, R. &mdash; <em>SCOLIA '25</em>, CEUR-WS Vol. 4022, pp. 4&ndash;10</div>
+                        </div>
+                    </div>
+
+                    <div class="pub">
+                        <span class="pub-type type-conf">Conf.</span>
+                        <div class="pub-body">
+                            <span class="pub-title">Mapping AI's Labor Impact: A Task Exposure Framework for Occupational Analysis</span>
+                            <div class="pub-meta">Jurowetzki, R., Abbonato, D., & Squicciarini, M. &mdash; <em>Conference paper</em>, 40 pp.</div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="publication">
-                <div class="pub-badge badge-brief">Research Brief</div>
-                <div class="pub-title"><a href="https://caisa.dk/forskning/agi-and-its-societal-implications" target="_blank">Artificial General Intelligence and its Societal Implications</a></div>
-                <div class="pub-authors">Sogaard, A., Rogers, A., Adler-Nissen, R., Belongie, S., Moeslund, T. B., & Jurowetzki, R. (2025).</div>
-                <div class="pub-journal">CAISA – The National Centre for Artificial Intelligence in Society.</div>
+            <div class="pub-group">
+                <div class="pub-group-year">2024</div>
+                <div class="pub-group-items">
+                    <div class="pub">
+                        <span class="pub-type type-journal">Journal</span>
+                        <div class="pub-body">
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0040162524003329" target="_blank" class="pub-title">PatentSBERTa: A deep NLP-based hybrid model for patent distance and classification using augmented SBERT</a>
+                            <div class="pub-meta">Bekamiri, H., Hain, D. S., & Jurowetzki, R. &mdash; <em>Technological Forecasting and Social Change</em> 206, 123536</div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="publication">
-                <div class="pub-badge badge-brief">Policy Brief</div>
-                <div class="pub-title"><a href="https://caisa.dk/forskning" target="_blank">A Modular Approach to Digital Sovereignty: From Ambition to Action with a National AI Orchestration Layer</a></div>
-                <div class="pub-authors">Jurowetzki, R., Adler-Nissen, R., & Pedersen, M. A. (2025).</div>
-                <div class="pub-journal">CAISA – The National Centre for Artificial Intelligence in Society.</div>
+            <div class="pub-group">
+                <div class="pub-group-year">2023</div>
+                <div class="pub-group-items">
+                    <div class="pub">
+                        <span class="pub-type type-journal">Journal</span>
+                        <div class="pub-body">
+                            <a href="https://www.tandfonline.com/doi/full/10.1080/13662716.2023.2272724" target="_blank" class="pub-title">Innovation dynamics in the age of artificial intelligence: introduction to the special issue</a>
+                            <div class="pub-meta">Holm, J. R., Hain, D. S., Jurowetzki, R., & Lorenz, E. &mdash; <em>Industry and Innovation</em> 30(9), 1141&ndash;1155</div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="publication">
-                <div class="pub-badge badge-journal">Journal Article</div>
-                <div class="pub-title"><a href="https://link.springer.com/article/10.1007/s00146-024-02171-z" target="_blank">The private sector is hoarding AI researchers: what implications for science?</a></div>
-                <div class="pub-authors">Jurowetzki, R., Hain, D. S., Wirtz, K., & Bianchini, S. (2025).</div>
-                <div class="pub-journal">AI & Society, 40(5), 4145–4152.</div>
+            <div class="pub-group">
+                <div class="pub-group-year">2022</div>
+                <div class="pub-group-items">
+                    <div class="pub">
+                        <span class="pub-type type-journal">Journal</span>
+                        <div class="pub-body">
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0040162522000919" target="_blank" class="pub-title">A text-embedding-based approach to measuring patent-to-patent technological similarity</a>
+                            <div class="pub-meta">Hain, D. S., Jurowetzki, R., Buchmann, T., & Wolf, P. &mdash; <em>Technological Forecasting and Social Change</em> 177, 121559</div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="publication">
-                <div class="pub-badge badge-journal">Journal Article</div>
-                <div class="pub-title"><a href="https://link.springer.com/article/10.1007/s00146-025-02214-z" target="_blank">The hopes and fears of artificial intelligence: a comparative computational discourse analysis.</a></div>
-                <div class="pub-authors">Elmholdt, K. T., Nielsen, J. A., Florczak, C. K., Jurowetzki, R., & Hain, D. (2025).</div>
-                <div class="pub-journal">AI & Society, 40(6), 4765–4782.</div>
-            </div>
-
-            <div class="publication">
-                <div class="pub-badge badge-conference">Workshop Paper</div>
-                <div class="pub-title"><a href="https://ceur-ws.org/Vol-4022/paper-01.pdf" target="_blank">Using reasoning for citation context classification</a></div>
-                <div class="pub-authors">Larsen, B. & Jurowetzki, R. (2025).</div>
-                <div class="pub-journal">SCOLIA '25: First International Workshop on Scholarly Information Access, CEUR-WS Vol. 4022, 4–10.</div>
-            </div>
-
-            <div class="publication">
-                <div class="pub-badge badge-conference">Conference Paper</div>
-                <div class="pub-title">Mapping AI's Labor Impact: A Task Exposure Framework for Occupational Analysis</div>
-                <div class="pub-authors">Jurowetzki, R., Abbonato, D., & Squicciarini, M. (2025).</div>
-                <div class="pub-journal">Conference paper, 40 pp.</div>
-            </div>
-
-            <h3 class="pub-year">2024</h3>
-
-            <div class="publication">
-                <div class="pub-badge badge-journal">Journal Article</div>
-                <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0040162524003329" target="_blank">PatentSBERTa: A deep NLP-based hybrid model for patent distance and classification using augmented SBERT.</a></div>
-                <div class="pub-authors">Bekamiri, H., Hain, D. S., & Jurowetzki, R. (2024).</div>
-                <div class="pub-journal">Technological Forecasting and Social Change, 206, 123536.</div>
-            </div>
-
-            <h3 class="pub-year">2023</h3>
-
-            <div class="publication">
-                <div class="pub-badge badge-journal">Journal Article</div>
-                <div class="pub-title"><a href="https://www.tandfonline.com/doi/full/10.1080/13662716.2023.2272724" target="_blank">Innovation dynamics in the age of artificial intelligence: introduction to the special issue.</a></div>
-                <div class="pub-authors">Holm, J. R., Hain, D. S., Jurowetzki, R., & Lorenz, E. (2023).</div>
-                <div class="pub-journal">Industry and Innovation, 30(9), 1141–1155.</div>
-            </div>
-
-            <h3 class="pub-year">2022</h3>
-
-            <div class="publication">
-                <div class="pub-badge badge-journal">Journal Article</div>
-                <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0040162522000919" target="_blank">A text-embedding-based approach to measuring patent-to-patent technological similarity.</a></div>
-                <div class="pub-authors">Hain, D. S., Jurowetzki, R., Buchmann, T., & Wolf, P. (2022).</div>
-                <div class="pub-journal">Technological Forecasting and Social Change, 177, 121559.</div>
-            </div>
-
-            <h3 class="pub-year">2018</h3>
-
-            <div class="publication">
-                <div class="pub-badge badge-journal">Journal Article</div>
-                <div class="pub-title"><a href="https://link.springer.com/article/10.1057/s41287-018-0137-4" target="_blank">Combining innovation systems and global value chains for development: Towards a research agenda.</a></div>
-                <div class="pub-authors">Jurowetzki, R., Lema, R., & Lundvall, B. &Aring;. (2018).</div>
-                <div class="pub-journal">The European Journal of Development Research, 30(3), 364–388.</div>
+            <div class="pub-group">
+                <div class="pub-group-year">2018</div>
+                <div class="pub-group-items">
+                    <div class="pub">
+                        <span class="pub-type type-journal">Journal</span>
+                        <div class="pub-body">
+                            <a href="https://link.springer.com/article/10.1057/s41287-018-0137-4" target="_blank" class="pub-title">Combining innovation systems and global value chains for development: Towards a research agenda</a>
+                            <div class="pub-meta">Jurowetzki, R., Lema, R., & Lundvall, B. &Aring;. &mdash; <em>European Journal of Development Research</em> 30(3), 364&ndash;388</div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <p class="pub-footer">
-                Complete list available on <a href="https://scholar.google.se/citations?user=9Zwa75gAAAAJ" target="_blank">Google Scholar</a>
+                Full list on <a href="https://scholar.google.se/citations?user=9Zwa75gAAAAJ" target="_blank">Google Scholar</a>
+                &nbsp;&middot;&nbsp;
+                <a href="https://vbn.aau.dk/en/persons/roman/" target="_blank">AAU Research Portal</a>
             </p>
         </section>
 
@@ -198,41 +253,41 @@
         <section class="section" id="news">
             <h2 class="section-title">News</h2>
 
-            <div class="news-item">
-                <span class="news-date">Nov 2025</span>
-                <p>UNESCO Toolkit for G20 published — co-authored a <a href="https://unesdoc.unesco.org/ark:/48223/pf0000395373" target="_blank">policy toolkit</a> on reducing AI-connected inequalities, prepared for the South Africa G20 Presidency.</p>
-            </div>
-
-            <div class="news-item">
-                <span class="news-date">Nov 2025</span>
-                <p>CAISA published research briefs on <a href="https://caisa.dk/forskning/agi-and-its-societal-implications" target="_blank">AGI and its societal implications</a> and a modular approach to digital sovereignty in Denmark.</p>
-            </div>
-
-            <div class="news-item">
-                <span class="news-date">May 2025</span>
-                <p>Appointed Chief Scientist at <strong>CAISA</strong> (National Centre for Artificial Intelligence in Society) during the centre's official launch.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Nov 2025</div>
+                    <div class="timeline-content">Co-authored the <a href="https://www.dcdt.gov.za/images/documents/Diverse/G20_toolkit-AI-inequality.pdf" target="_blank">UNESCO Toolkit</a> on reducing AI-connected inequalities, prepared for the South Africa G20 Presidency.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Nov 2025</div>
+                    <div class="timeline-content"><a href="https://caisa.dk" target="_blank">CAISA</a> published research briefs on <a href="https://caisa.dk/forskning/agi-and-its-societal-implications" target="_blank">AGI and its societal implications</a> and a modular approach to digital sovereignty in Denmark.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">May 2025</div>
+                    <div class="timeline-content">Appointed Chief Scientist at <a href="https://caisa.dk" target="_blank">CAISA</a> (National Centre for Artificial Intelligence in Society) during the centre's official launch.</div>
+                </div>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section class="contact-section" id="contact">
-            <h3 class="contact-title">Contact</h3>
+            <h3 class="section-title">Contact</h3>
             <div class="contact-grid">
                 <div>
                     <div class="contact-label">Email</div>
-                    <a href="mailto:roman@business.aau.dk" class="contact-item">roman@business.aau.dk</a>
+                    <a href="mailto:roman@business.aau.dk" class="contact-value">roman@business.aau.dk</a>
                 </div>
                 <div>
                     <div class="contact-label">Office</div>
-                    <div class="contact-item">Fibigerstræde 11, Room 103<br>DK-9220 Aalborg Øst, Denmark</div>
+                    <div class="contact-value">Fibigerstræde 11, Room 103<br>DK-9220 Aalborg &Oslash;st, Denmark</div>
                 </div>
                 <div>
                     <div class="contact-label">Profiles</div>
                     <div class="contact-links">
-                        <a href="https://linkedin.com/in/rjurowetzki" class="contact-item" target="_blank">LinkedIn</a>
-                        <a href="https://scholar.google.se/citations?user=9Zwa75gAAAAJ" class="contact-item" target="_blank">Google Scholar</a>
-                        <a href="https://orcid.org/0000-0002-5199-918X" class="contact-item" target="_blank">ORCID</a>
-                        <a href="https://vbn.aau.dk/en/persons/roman/" class="contact-item" target="_blank">AAU Research Portal</a>
+                        <a href="https://scholar.google.se/citations?user=9Zwa75gAAAAJ" target="_blank">Google Scholar</a>
+                        <a href="https://orcid.org/0000-0002-5199-918X" target="_blank">ORCID</a>
+                        <a href="https://linkedin.com/in/rjurowetzki" target="_blank">LinkedIn</a>
+                        <a href="https://vbn.aau.dk/en/persons/roman/" target="_blank">AAU Research Portal</a>
                     </div>
                 </div>
             </div>
@@ -242,10 +297,6 @@
     <!-- Scroll to Top Button -->
     <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&uarr;</button>
 
-    <button id="theme-toggle" title="Toggle theme">
-        <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-    </button>
     <script>
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
@@ -255,7 +306,6 @@
             localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
         });
 
-        // Apply saved theme on load
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
             body.classList.add('dark');
@@ -263,14 +313,10 @@
             body.classList.remove('dark');
         }
 
-        // Scroll to top button
         let scrollTopBtn = document.getElementById("scrollTopBtn");
         window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                scrollTopBtn.style.display = "block";
-            } else {
-                scrollTopBtn.style.display = "none";
-            }
+            scrollTopBtn.style.display =
+                (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
         };
 
         function scrollToTop() {
